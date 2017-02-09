@@ -1,72 +1,81 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		</head>
 		<meta charset="UTF8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-			</meta>
-			<title>The Royal Helpdesk</title>
-			</head>
-				<body>
+		<title>The Royal Helpdesk</title>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<link rel="stylesheet" href="reset.css" type="text/css">
+	</head>
+	<body>
 
-		<h1> The Royal Helpdesk</h1>
-			<form action="" method="post">
-				</header>
+		<header class="page-header">
+				<h1> The Royal Helpdesk</h1>
 
-		<section>
-		
-		<form action="" method="post">
-			<h2> Submit a new ticket.</h2>
-		<p><small> Or don't. I'm not your supervisor.</small></p>
-	<div class="form-group"
-				<label for="name">Your name</label>
-				<input type="text" name="name" id="name">
-</div>
-		<div class="form-group"
-				<label for="department">department</label>
-				<input type="text" name="department" id="department">
+		</header>
 
-</div>
-			<div class="form-group"
-				<label for="email">"Your email"</label>
-				<input type="text" name="email" id="email">
 
-</div>
-			<div class="form-group"
-				<label for=""></label>
-				<select name="" id="">
-
-</div>
-			<div class="form-group"
-				<label for="priority">Ticket priority</label>
-				<select name="priority" id="priority">
-					<option value="">Please select the importance of your problem</option>
-					<option value="High">Critical</option> 
-					<option value="Medium">High</option> 
-					<option value="Low">Important</option> 
-</select>
-
-</div>
-			<div class="form-group"
-				<label for="details">Details of your issue</label>
-				<label for="details">Please be as descriptive as you can, and include as much detail as possible</label>
-				<textarea name="details" id="details" required></textarea>
-			</div>
-				<div class="form-group">
-					<input type="submit" value="Report issue">
-				</div>
-</form>
-	<section>	
-		<h> Existing tickets<h2>
-
-<ul class="ticket-list">
+		<div class="container"> 
+			<div class="row">
+				<section class="col-md-8">
 	
-		<li class="ticket-list__item"><strong> Angelo Baa </strong> - Help pls </li>
-		<li class="ticket-list__item"><strong> Aj Bloggs </strong> - Computer says no</li>
-		<li class="ticket-list__item"><strong> Abubaba </strong> - Error </li>
-		<li class="ticket-list__item"><strong> Smoked Salmon </strong> - Toasters blown </li>
-</ul>
-</form>
+					<form action="" method="post" class="main-form">
+						<h2 class="main-form__title"> Submit a new ticket</h2>
+						<p><small> Or don't. I'm not your supervisor.</small></p>
+						<div class="form-group">
+							<label class="control-label"  for="name">Your name</label>
+							<input class="form-control" class="text" name="name" id="name">
+						</div>
+						<div class="form-group">
+								<label class="control-label" for ="department">department</label>
+								<input class="form-control" class="text" name="department" id="department">
+						</div>
+						<div class="form-group"
+							<label class="control-label" for = "email">"Your email"</label>
+							<input class="form-control" class="text" name="email" id="email">
+						</div>
+						<div class="form-group"
+							<label class="control-label" for ="priority">Ticket priority</label>
+							<select class="form-control" name="priority" id="priority">
+								<option value="">Please select the importance of your problem</option>
+								<option value="High">Critical</option> 
+								<option value="Medium">High</option> 
+								<option value="Low">Important</option> 
+							</select>
+						</div>
+						<div class="form-group"
+							<label class="control-label" for ="details">Details of your issue</label>
+							<label class="control-label" for = "details">Please be as descriptive as you can, and include as much detail as possible</label>
+							<textarea class="form-control" name="details" id="details" required></textarea>
+						</div>
+						<div class="form-group">
+							<input class = "btn btn--block"type="submit" value="Report issue">
+						</div>
+					</form>
+				</section>	
+				<section class="col-md-4 existing-tickets">
+					<h2 class="existing-tickets__title">Existing tickets</h2>
 
-				</body>
+					<ul class="ticket-list">
+							<li class="ticket-list__item">
+								<h4 class="ticket-list__title">Help pls</h4>
+								<span class="ticket-list__user"> Angelo Baa </span>
+							</li>
+							<li class="ticket-list__item">
+								<h4 class="ticket-list__title">Computer says no</h4>
+								<span class="ticket-list__user"> Aj Bloggs </span>
+							</li>
+							<li class="ticket-list__item">
+								<h4 class="ticket-list__title">Error </h4>
+								<span class="ticket-list__user"> Abubaba  </span>
+							</li>
+							<li class="ticket-list__item">
+								<h4 class="ticket-list__title">Toasters blown</h4>
+								<span class="ticket-list__user"> Smoked Salmon </span>
+							</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</body>
 </html>
