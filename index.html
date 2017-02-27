@@ -10,72 +10,64 @@
 	<body>
 
 		<header class="page-header">
-				<h1> The Royal Helpdesk</h1>
-
+			<h1>The Royal Helpdesk</h1>
 		</header>
 
-
-		<div class="container"> 
+		<div class="container">
 			<div class="row">
 				<section class="col-md-8">
-	
-					<form action="" method="post" class="main-form">
-						<h2 class="main-form__title"> Submit a new ticket</h2>
-						<p><small> Or don't. I'm not your supervisor.</small></p>
+
+					<form action="" method="post" class="main-form" id="ticket-form">
+						<h2 class="main-form__title">Submit a new ticket</h2>
+						<p><small>Or don't. I'm not your supervisor.</small></p>
 						<div class="form-group">
 							<label class="control-label"  for="name">Your name</label>
-							<input class="form-control" class="text" name="name" id="name">
+							<input class="form-control" type="text" name="name" id="name">
 						</div>
-						<div class="form-group">
-								<label class="control-label" for ="department">department</label>
-								<input class="form-control" class="text" name="department" id="department">
-						</div>
+	                    <div class="form-group">
+	                        <label class="control-label" for="department">Department</label>
+	                        <select class="form-control" id="department" name="department" required>
+	                            <option value="">Please select.</option>
+	                            <option value="faculty">Faculty</option>
+	                            <option value="administration">Administration</option>
+	                            <option value="accounts">Accounts</option>
+	                            <option value="it">IT</option>
+	                        </select>
+	                    </div>
 						<div class="form-group"
-							<label class="control-label" for = "email">"Your email"</label>
-							<input class="form-control" class="text" name="email" id="email">
+							<label class="control-label" for="email">Your email</label>
+							<input class="form-control" type="email" name="email" id="email">
 						</div>
 						<div class="form-group"
 							<label class="control-label" for ="priority">Ticket priority</label>
 							<select class="form-control" name="priority" id="priority">
 								<option value="">Please select the importance of your problem</option>
-								<option value="High">Critical</option> 
-								<option value="Medium">High</option> 
-								<option value="Low">Important</option> 
+								<option value="High">Critical</option>
+								<option value="Medium">High</option>
+								<option value="Low">Important</option>
 							</select>
 						</div>
 						<div class="form-group"
-							<label class="control-label" for ="details">Details of your issue</label>
-							<label class="control-label" for = "details">Please be as descriptive as you can, and include as much detail as possible</label>
+							<label class="control-label" for="details">Details of your issue</label>
+							<label class="control-label" for="details">Please be as descriptive as you can, and include as much detail as possible</label>
 							<textarea class="form-control" name="details" id="details" required></textarea>
 						</div>
 						<div class="form-group">
-							<input class = "btn btn--block"type="submit" value="Report issue">
+							<input class="btn btn--block" type="submit" value="Report issue">
 						</div>
 					</form>
-				</section>	
+				</section>
 				<section class="col-md-4 existing-tickets">
 					<h2 class="existing-tickets__title">Existing tickets</h2>
 
-					<ul class="ticket-list">
-							<li class="ticket-list__item">
-								<h4 class="ticket-list__title">Help pls</h4>
-								<span class="ticket-list__user"> Angelo Baa </span>
-							</li>
-							<li class="ticket-list__item">
-								<h4 class="ticket-list__title">Computer says no</h4>
-								<span class="ticket-list__user"> Aj Bloggs </span>
-							</li>
-							<li class="ticket-list__item">
-								<h4 class="ticket-list__title">Error </h4>
-								<span class="ticket-list__user"> Abubaba  </span>
-							</li>
-							<li class="ticket-list__item">
-								<h4 class="ticket-list__title">Toasters blown</h4>
-								<span class="ticket-list__user"> Smoked Salmon </span>
-							</li>
+					<ul class="ticket-list" id="ticket-list">
 					</ul>
 				</section>
 			</div>
 		</div>
+
+		<script src="/node_modules/jquery/dist/jquery.min.js" type="text/javascript" ></script>
+		<script src="/main.js" type="text/javascript" ></script>
+
 	</body>
 </html>
